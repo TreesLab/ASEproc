@@ -8,52 +8,50 @@
 The ASEproc's manual and test datset can be downloaded from our FTP site: 
 
 #### **1. System requirements**
+ASEproc runs under the Linux
 
-   ASEproc runs under the Linux
-
-   The R scripts used in ASEproc are developed under 3.3.0
+The R scripts used in ASEproc are developed under 3.3.0
 
 #### **2. Preparation**
 
-   The users can download  file from the "" page.
-  
-
 ##### **2.1.  External tools**
 
-   The following three tools are involved in the ASEproc:
+  The following three tools are involved in the ASEproc:
 ```
    (1) Samtools (http://www.htslib.org/)
    (2) R (https://www.r-project.org/)
    (3) pileup2base (https://github.com/riverlee/pileup2base/blob/master/pileup2base.pl)
 ```
    
- **2.3.  Reference preparation**
+##### **2.3.  Reference preparation**
  
-The genomic sequences was downloaded from the GENCODE website at http://www.gencodegenes.org/. Given the human reference genome (GRCh38.p7, http://www.gencodegenes.org/releases/current.html) as an example:
+   The genomic sequences was downloaded from the GENCODE website at http://www.gencodegenes.org/. Given the human reference genome       (GRCh38.p7, http://www.gencodegenes.org/releases/current.html) as an example:
 
 ```
-   (1) Genome sequence FASTA file in GRCh38.p7.genome assembly: GRCh38.p7.genome.fa.gz
+    Genome sequence FASTA file in GRCh38.p7.genome assembly: GRCh38.p7.genome.fa.gz
 ```
 
- **2.4.  Generating the bam files**
+##### **2.4.  Generating the bam files**
 
-	The bam files for ASE procedure were generated from STAR aligner and Samtools, the users can generate it with the following command:
+   The bam files for ASEproc were generated from STAR aligner and Samtools, the users can generate it with the following command:
+	
 ```
-        > STAR --genomeDir Genome_dir --readFilesIn test_1.fq test_2.fq --runThreadN 10
-        > cat <(samtools view -S -H Aligned.out.sam) <(samtools view -S Aligned.out.sam | awk '$5==255{print $0}') > test.sam
-	> samtools view -S -b -o test.bam test.sam
-	> samtools sort -o test_sort.bam test.bam
-	> samtools index test_sort.bam
+     > STAR --genomeDir Genome_dir --readFilesIn test_1.fq test_2.fq --runThreadN 10
+     > cat <(samtools view -S -H Aligned.out.sam) <(samtools view -S Aligned.out.sam | awk '$5==255{print $0}') > test.sam
+     > samtools view -S -b -o test.bam test.sam
+     > samtools sort -o test_sort.bam test.bam
+     > samtools index test_sort.bam
 ```
- **2.5.  Preparing the SNP files**
+##### **2.5.  Preparing the SNP files**
 
-	The users must prepare the SNP file.
+  The users must prepare the SNP file.
 
 	> chr10	119168031	119168032	+	T	G/T	GT
 	> chr10	123138743	123138744	+	T	C/T	CT
 	> chr10	13278235	13278236	+	C	C/T	CT
 
-        The column format of SNP file is described as follows:
+  The column format of SNP file is described as follows:
+  
         ```
         (1) Chromosome name 
         (2) 0 base
