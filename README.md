@@ -7,13 +7,13 @@
 
 The ASEproc's manual and test datset can be downloaded from our FTP site: 
 
-## **1. System requirements**
+#### **1. System requirements**
 
    ASEproc runs under the Linux
 
    The R scripts used in ASEproc are developed under 3.3.0
 
-## **2. Preparation**
+#### **2. Preparation**
 
    The users can download  file from the "" page.
   
@@ -64,7 +64,7 @@ The genomic sequences was downloaded from the GENCODE website at http://www.genc
         (7) Alleles type
         ```
 
-## **3. Execution of ASE procedure and Graph procedure**
+#### **3. Execution of ASE procedure and Graph procedure**
 
    Usage:
 
@@ -80,7 +80,7 @@ The test bam files "NA06984.bam", "NA06985.bam" and SNP files "NA06984.bed", "NA
 
 Note: The Graph_PROC.sh is executed after all ASE_PROC are finished.
 
-## **4. ASE procedure outputs**
+#### **4. ASE procedure outputs**
 
    The output files are generated after executing the ASE_PROC, these files would be stored in Output folder
   ```
