@@ -5,7 +5,7 @@
 --------------
 #### 
 
-The ASEproc's manual and test datset can be downloaded from our FTP site: 
+The ASEproc's manual and test datset can be downloaded from our FTP site: ftp://treeslab1.genomics.sinica.edu.tw/ASEproc/
 
 #### **1. System requirements**
 ASEproc runs under the Linux
