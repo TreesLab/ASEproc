@@ -1,17 +1,17 @@
-## Manual of ASE procedure
+## Manual of ASEproc
 ###### Version: 1.0
 
-##### We developed a new pipeline, ASE procedure, which can help user to find ASE site from RNA-seq data. We also built a Graph procedure to help user draw the scatter plot.
+##### We developed a new pipeline, ASEproc, which can help user to find allele specific expression site from RNA-seq data. We also built a graph procedure to help user draw the scatter plot.
 --------------
 #### 
 
-The ASE procedure, document, and test set can be downloaded from our FTP site:  or GitHub: 
+The ASEproc's manual and test datset can be downloaded from our FTP site: 
 
 ####**1. System requirements**
 
-   ASE procedure runs under the Linux
+   ASEproc runs under the Linux
 
-   The R scripts used in NCLscan are developed under 3.3.0
+   The R scripts used in ASEproc are developed under 3.3.0
 
 ####**2. Preparation**
 
@@ -20,7 +20,7 @@ The ASE procedure, document, and test set can be downloaded from our FTP site:  
 
  **2.1.  External tools**
 
-   The following three tools are involved in the ASE procedure:
+   The following three tools are involved in the ASEproc:
 ```
    (1) Samtools (http://www.htslib.org/)
    (2) R (https://www.r-project.org/)
@@ -69,12 +69,12 @@ The column format of SNP file is described as follows:
    Usage:
 
         > ./ASE_PROC.sh [Task_name] [Bam_file] [Ref_genome] [SNP_file]
-		> ./Graph_PROC.sh [Site_location]
+	> ./Graph_PROC.sh [Site_location]
 
    An example:
 
         > ./ASE_PROC.sh NA06984 NA06984.bam GRCh38.p7.genome.fa NA06984.bed
-		> ./Graph_PROC chr1:10000:10001
+	> ./Graph_PROC chr1:10000:10001
 
 The test bam files "NA06984.bam", "NA06985.bam" and SNP files "NA06984.bed", "NA06985.bed" can be downloaded from our FTP site: 
 
@@ -87,7 +87,7 @@ The output files are generated after executing the ASE_PROC, these files would b
 		> chr1	151760858	151760859	T	G	67	67	1	Biallilic
 		> chr1	154584186	154584187	G	A	98	66	0.0124621582945403	Partial
 		> chr1	155017118	155017119	T	C	24	22	0.768082561900943	Biallilic
-
+```
 The column format is described as follows:
 ```
 (1) Chromosome name 
