@@ -1,7 +1,7 @@
 ## Manual of ASEproc
 ###### Version: 1.0
 
-##### We developed a new pipeline, ASEproc, which can help user to find allele specific expression site from RNA-seq data. We also built a graph procedure to help user draw the scatter plot.
+##### We developed a new pipeline, ASEproc, which can help user to find allele specific expression site from RNA-seq data. We also built a graph procedure, Graphproc, to help user draw the scatter plot.
 --------------
 #### 
 
@@ -52,7 +52,7 @@ The R scripts used in ASEproc are developed under 3.3.0
 
   The column format of SNP file is described as follows:
   
-        ```
+        
         (1) Chromosome name 
         (2) 0 base
         (3) 1 base
@@ -60,9 +60,9 @@ The R scripts used in ASEproc are developed under 3.3.0
         (5) Reference base
         (6) Reference base / Alternative base
         (7) Alleles type
-        ```
+        
 
-#### **3. Execution of ASE procedure and Graph procedure**
+#### **3. Execution of ASEproc and Graphproc**
 
    Usage:
 
