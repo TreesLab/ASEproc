@@ -25,7 +25,7 @@ rm -f test.pileup filter_pileup.txt
 
 ##### Process Test File
 
-SiteQ "$Name".txt -s $SNP_BED "$Name".site.tem
+./bin/SiteQ "$Name".txt -s $SNP_BED "$Name".site.tem
 cat "$Name".site.tem | awk '{print "chr"$1"\t"$2"\t"$3"\t"$4"\t"$13"\t"$5"\t"$6"\t"$7"\t"$8}' > "$Name".test.1.tem
 cat "$Name".site.tem | awk '{print $13}' | sed "s/\//\t/g" > "$Name".test.2.tem
 paste "$Name".test.1.tem "$Name".test.2.tem > "$Name".test.tem
